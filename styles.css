@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --green: hsl(75, 94%, 57%);
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --black: hsl(0, 0%, 8%);
+
+    --ff: "Inter", sans-serif;
+    --ff-reg: 400;
+    --ff-semi-bold: 600;
+    --ff-bold: 700;
+}
+
+/* CSS Reset: https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  font-family: var(--ff);
+  font-size: 0.9375rem;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 
+================
+====MAIN CSS====
+================
+*/
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    background-color: var(--dark-grey);
+    margin: 0 2rem;
+    width: 25rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+
+    margin-bottom: 2rem;
+}
+
+.header__img {
+    max-width: 5rem;
+    border-radius: 100%;
+}
+
+.personal__name {
+    font-size: 2rem;
+    font-weight: var(--ff-semi-bold);
+}
+
+.personal__location {
+    font-size: 1rem;
+    color: var(--green)
+}
+
+.header__info {
+    font-size: .8rem;
+    font-weight: var(--ff-reg);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 100%;
+}
+
+.links__btn {
+    border: none;
+    border-radius: .6rem;
+    background-color: var(--grey);
+    color: #fff;
+
+    font-size: .9rem;
+    font-weight: var(--ff-semi-bold);
+
+    width: 100%;
+    height: 2.5rem;
+}
+
+.links__btn:hover {
+    cursor: pointer;
+    background-color: var(--green);
+    color: var(--black);
+}
+
+@media screen and (max-width: 400px) {
+    .personal__name {
+        font-size: 1.5rem;
+    }
+
+    .personal__location {
+        font-size: .8rem;
+    }
+}
